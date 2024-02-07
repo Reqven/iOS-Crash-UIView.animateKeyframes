@@ -1,0 +1,224 @@
+Incident Identifier: -
+Hardware Model:      iPhone15,2
+Process:             -
+Path:                /private/var/containers/Bundle/Application/90C3937F-0BF8-48DE-9DE4-C0D28C06DF11/MyApp.app/MyApp
+Identifier:          -
+Version:             -
+AppStoreTools:       15C5065a
+AppVariant:          1:iPhone15,2:16
+Code Type:           ARM-64 (Native)
+Role:                Foreground
+Parent Process:      launchd [1]
+Coalition:           -
+
+Date/Time:           2024-01-28 10:23:02.3377 -0300
+Launch Time:         2024-01-27 15:59:11.7717 -0300
+OS Version:          iPhone OS 16.1.2 (20B110)
+Release Type:        User
+Baseband Version:    1.13.03
+Report Version:      104
+
+Exception Type:  EXC_CRASH (SIGABRT)
+Exception Codes: 0x0000000000000000, 0x0000000000000000
+Triggered by Thread:  0
+
+Last Exception Backtrace:
+0   CoreFoundation                	0x1c057de88 __exceptionPreprocess + 164 (NSException.m:202)
+1   libobjc.A.dylib               	0x1b98ab8d8 objc_exception_throw + 60 (objc-exception.mm:356)
+2   Foundation                    	0x1bae99b4c -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:] + 188 (NSException.m:242)
+3   UIKitCore                     	0x1c2ad5970 -[_UIViewDeferredAnimation addAnimationFrameForValue:] + 216 (UIView.m:2792)
+4   UIKitCore                     	0x1c2ad5208 -[_UIViewDeferredKeyframeAnimation addAnimationFrameForValue:] + 72 (UIView.m:2901)
+5   UIKitCore                     	0x1c2ad5148 __93-[UIViewKeyframeAnimationState addKeyframeWithRelativeStartTime:relativeDuration:animations:]_block_invoke + 368 (UIView.m:2651)
+6   CoreFoundation                	0x1c0587588 __NSDICTIONARY_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (NSDictionaryHelpers.m:10)
+7   CoreFoundation                	0x1c0611bc0 -[__NSDictionaryM enumerateKeysAndObjectsWithOptions:usingBlock:] + 212 (NSDictionaryM_Common.h:311)
+8   UIKitCore                     	0x1c2b636c8 -[UIViewKeyframeAnimationState addKeyframeWithRelativeStartTime:relativeDuration:animations:] + 156 (UIView.m:2638)
+9   UIKitCore                     	0x1c2b635dc +[UIView(UIViewKeyframeAnimations) addKeyframeWithRelativeStartTime:relativeDuration:animations:] + 132 (UIView.m:15468)
+10  MyApp                   	        0x102b657f8 closure #1 in FavoritesViewController.showSearchBarCancelButton() + 196 (FavoritesViewController+Search.swift:45)
+11  MyApp                   	        0x102c04198 thunk for @escaping @callee_guaranteed () -> () + 28 (<compiler-generated>:0)
+12  UIKitCore                     	0x1c28011e4 +[UIView _setupAnimationWithDuration:delay:view:options:factory:animations:start:animationStateGenerator:completion:] + 512 (UIView.m:15213)
+13  UIKitCore                     	0x1c292e140 +[UIView(UIViewKeyframeAnimations) animateKeyframesWithDuration:delay:options:animations:completion:] + 156 (UIView.m:15458)
+14  MyApp                   	        0x102b655a4 FavoritesViewController.showSearchBarCancelButton() + 44 (FavoritesViewController+Search.swift:44)
+15  MyApp                   	        0x102b655a4 FavoritesViewController.textFieldDidBeginEditing(_:) + 44 (FavoritesViewController+Search.swift:12)
+16  MyApp                   	        0x102b655a4 @objc FavoritesViewController.textFieldDidBeginEditing(_:) + 224 (<compiler-generated>:11)
+17  UIKitCore                     	0x1c2c949c8 -[UITextField _notifyDidBeginEditing] + 104 (UITextField.m:1910)
+18  UIKitCore                     	0x1c2952554 -[UITextField _becomeFirstResponder] + 196 (UITextField.m:1842)
+19  UIKitCore                     	0x1c294ffa4 -[UIResponder becomeFirstResponder] + 516 (UIResponder.m:392)
+20  UIKitCore                     	0x1c294fd90 -[UIView(Hierarchy) becomeFirstResponder] + 120 (UIView.m:12379)
+21  UIKitCore                     	0x1c2803bc4 -[UITextField becomeFirstResponder] + 152 (UITextField.m:1496)
+22  MyApp                   	        0x102ab6840 CustomSearchBar.onSearchBarTap(_:) + 36 (CustomSearchBar.swift:36)
+23  MyApp                   	        0x102ab6840 @objc CustomSearchBar.onSearchBarTap(_:) + 88 (<compiler-generated>:35)
+24  UIKitCore                     	0x1c27ef858 -[UIGestureRecognizerTarget _sendActionWithGestureRecognizer:] + 128 (UIPerformVoidSelector.h:48)
+25  UIKitCore                     	0x1c2b5d9f0 _UIGestureRecognizerSendTargetActions + 92 (UIGestureRecognizer.m:1538)
+26  UIKitCore                     	0x1c28d70a4 _UIGestureRecognizerSendActions + 272 (UIGestureRecognizer.m:1577)
+27  UIKitCore                     	0x1c27b7a14 -[UIGestureRecognizer _updateGestureForActiveEvents] + 484 (UIGestureRecognizer.m:0)
+28  UIKitCore                     	0x1c28638d8 _UIGestureEnvironmentUpdate + 2436 (UIGestureEnvironment.m:198)
+29  UIKitCore                     	0x1c30e8e14 -[UIGestureEnvironment _deliverEvent:toGestureRecognizers:usingBlock:] + 288 (UIGestureEnvironment.m:1376)
+30  UIKitCore                     	0x1c282831c -[UIGestureEnvironment _updateForEvent:window:] + 188 (UIGestureEnvironment.m:1345)
+31  UIKitCore                     	0x1c282cc74 -[UIWindow sendEvent:] + 3268 (UIWindow.m:3471)
+32  UIKitCore                     	0x1c282bf44 -[UIApplication sendEvent:] + 672 (UIApplication.m:12538)
+33  UIKitCore                     	0x1c282b600 __dispatchPreprocessedEventFromEventQueue + 7084 (UIEventDispatcher.m:2417)
+34  UIKitCore                     	0x1c28733e4 __processEventQueue + 5632 (UIEventDispatcher.m:2726)
+35  UIKitCore                     	0x1c34c50a4 updateCycleEntry + 168 (UIEventDispatcher.m:117)
+36  UIKitCore                     	0x1c2d83740 _UIUpdateSequenceRun + 84 (_UIUpdateSequence.mm:112)
+37  UIKitCore                     	0x1c33cafd0 schedulerStepScheduledMainSection + 172 (_UIUpdateScheduler.m:987)
+38  UIKitCore                     	0x1c33ca19c runloopSourceCallback + 92 (_UIUpdateScheduler.m:1079)
+39  CoreFoundation                	0x1c0649f54 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 28 (CFRunLoop.c:1957)
+40  CoreFoundation                	0x1c065632c __CFRunLoopDoSource0 + 176 (CFRunLoop.c:2001)
+41  CoreFoundation                	0x1c05da210 __CFRunLoopDoSources0 + 244 (CFRunLoop.c:2038)
+42  CoreFoundation                	0x1c05efba8 __CFRunLoopRun + 836 (CFRunLoop.c:2953)
+43  CoreFoundation                	0x1c05f4ed4 CFRunLoopRunSpecific + 612 (CFRunLoop.c:3418)
+44  GraphicsServices              	0x1f98f6368 GSEventRunModal + 164 (GSEvent.c:2196)
+45  UIKitCore                     	0x1c2ad33d0 -[UIApplication _run] + 888 (UIApplication.m:3745)
+46  UIKitCore                     	0x1c2ad3034 UIApplicationMain + 340 (UIApplication.m:5335)
+47  libswiftUIKit.dylib           	0x1c90c3308 UIApplicationMain(_:_:_:_:) + 104 (UIKit.swift:538)
+48  MyApp                   	        0x102a08120 specialized static UIApplicationDelegate.main() + 28 (<compiler-generated>:21)
+49  MyApp                   	        0x102a08120 static AppDelegate.$main() + 28 (AppDelegate.swift:0)
+50  MyApp                   	        0x102a08120 main + 120
+51  dyld                          	0x1dec60960 start + 2528 (dyldMain.cpp:1170)
+
+Thread 0 name:
+Thread 0 Crashed:
+0   libsystem_kernel.dylib        	0x00000001fd17c200 __pthread_kill + 8 (:-1)
+1   libsystem_pthread.dylib       	0x000000020d5de1ac pthread_kill + 268 (pthread.c:1670)
+2   libsystem_c.dylib             	0x00000001c7c093e4 __abort + 128 (abort.c:155)
+3   libsystem_c.dylib             	0x00000001c7bb1c98 abort + 192 (abort.c:126)
+4   libc++abi.dylib               	0x000000020d51eb8c abort_message + 132 (abort_message.cpp:78)
+5   libc++abi.dylib               	0x000000020d50ea80 demangling_terminate_handler() + 336 (cxa_default_handlers.cpp:71)
+6   libobjc.A.dylib               	0x00000001b98b1d3c _objc_terminate() + 144 (objc-exception.mm:498)
+7   FirebaseCrashlytics           	0x0000000104539fa4 FIRCLSTerminateHandler() + 340 (FIRCLSException.mm:452)
+8   libc++abi.dylib               	0x000000020d51df28 std::__terminate(void (*)()) + 20 (cxa_handlers.cpp:59)
+9   libc++abi.dylib               	0x000000020d520ecc __cxa_rethrow + 148 (cxa_exception.cpp:616)
+10  libobjc.A.dylib               	0x00000001b98ad6b4 objc_exception_rethrow + 44 (objc-exception.mm:401)
+11  CoreFoundation                	0x00000001c05f4f98 CFRunLoopRunSpecific + 808 (CFRunLoop.c:3434)
+12  GraphicsServices              	0x00000001f98f6368 GSEventRunModal + 164 (GSEvent.c:2196)
+13  UIKitCore                     	0x00000001c2ad33d0 -[UIApplication _run] + 888 (UIApplication.m:3745)
+14  UIKitCore                     	0x00000001c2ad3034 UIApplicationMain + 340 (UIApplication.m:5335)
+15  libswiftUIKit.dylib           	0x00000001c90c3308 UIApplicationMain(_:_:_:_:) + 104 (UIKit.swift:538)
+16  MyApp                   	        0x0000000102a08120 specialized static UIApplicationDelegate.main() + 28 (<compiler-generated>:21)
+17  MyApp                   	        0x0000000102a08120 static AppDelegate.$main() + 28 (AppDelegate.swift:0)
+18  MyApp                   	        0x0000000102a08120 main + 120
+19  dyld                          	0x00000001dec60960 start + 2528 (dyldMain.cpp:1170)
+
+Thread 1:
+0   libsystem_pthread.dylib       	0x000000020d5d7b90 _pthread_cond_updateval + 256 (pthread_cond.c:992)
+
+Thread 2 name:
+Thread 2:
+0   libsystem_kernel.dylib        	0x00000001fd175b48 mach_msg2_trap + 8 (:-1)
+1   libsystem_kernel.dylib        	0x00000001fd188008 mach_msg2_internal + 80 (mach_msg.c:201)
+2   libsystem_kernel.dylib        	0x00000001fd188248 mach_msg_overwrite + 388 (mach_msg.c:0)
+3   libsystem_kernel.dylib        	0x00000001fd17608c mach_msg + 24 (mach_msg.c:323)
+4   CoreFoundation                	0x00000001c05eeaf0 __CFRunLoopServiceMachPort + 160 (CFRunLoop.c:2622)
+5   CoreFoundation                	0x00000001c05efd34 __CFRunLoopRun + 1232 (CFRunLoop.c:3005)
+6   CoreFoundation                	0x00000001c05f4ed4 CFRunLoopRunSpecific + 612 (CFRunLoop.c:3418)
+7   Foundation                    	0x00000001ba996334 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 212 (NSRunLoop.m:373)
+8   Foundation                    	0x00000001ba99621c -[NSRunLoop(NSRunLoop) runUntilDate:] + 64 (NSRunLoop.m:420)
+9   UIKitCore                     	0x00000001c2c0833c -[UIEventFetcher threadMain] + 436 (UIEventFetcher.m:1377)
+10  Foundation                    	0x00000001ba9af808 __NSThread__start__ + 716 (NSThread.m:963)
+11  libsystem_pthread.dylib       	0x000000020d5d86cc _pthread_start + 148 (pthread.c:893)
+12  libsystem_pthread.dylib       	0x000000020d5d7ba4 thread_start + 8 (:-1)
+
+Thread 3 name:
+Thread 3:
+0   libsystem_kernel.dylib        	0x00000001fd175b48 mach_msg2_trap + 8 (:-1)
+1   libsystem_kernel.dylib        	0x00000001fd188008 mach_msg2_internal + 80 (mach_msg.c:201)
+2   libsystem_kernel.dylib        	0x00000001fd188248 mach_msg_overwrite + 388 (mach_msg.c:0)
+3   libsystem_kernel.dylib        	0x00000001fd17608c mach_msg + 24 (mach_msg.c:323)
+4   FirebaseCrashlytics           	0x0000000104542bf4 FIRCLSMachExceptionReadMessage + 56 (FIRCLSMachException.c:192)
+5   FirebaseCrashlytics           	0x0000000104542bf4 FIRCLSMachExceptionServer + 104 (FIRCLSMachException.c:168)
+6   libsystem_pthread.dylib       	0x000000020d5d86cc _pthread_start + 148 (pthread.c:893)
+7   libsystem_pthread.dylib       	0x000000020d5d7ba4 thread_start + 8 (:-1)
+
+Thread 4 name:
+Thread 4:
+0   libsystem_kernel.dylib        	0x00000001fd175b48 mach_msg2_trap + 8 (:-1)
+1   libsystem_kernel.dylib        	0x00000001fd188008 mach_msg2_internal + 80 (mach_msg.c:201)
+2   libsystem_kernel.dylib        	0x00000001fd188248 mach_msg_overwrite + 388 (mach_msg.c:0)
+3   libsystem_kernel.dylib        	0x00000001fd17608c mach_msg + 24 (mach_msg.c:323)
+4   CoreFoundation                	0x00000001c05eeaf0 __CFRunLoopServiceMachPort + 160 (CFRunLoop.c:2622)
+5   CoreFoundation                	0x00000001c05efd34 __CFRunLoopRun + 1232 (CFRunLoop.c:3005)
+6   CoreFoundation                	0x00000001c05f4ed4 CFRunLoopRunSpecific + 612 (CFRunLoop.c:3418)
+7   CFNetwork                     	0x00000001c194c5a8 +[__CFN_CoreSchedulingSetRunnable _run:] + 392 (CoreSchedulingSet.mm:1372)
+8   Foundation                    	0x00000001ba9af808 __NSThread__start__ + 716 (NSThread.m:963)
+9   libsystem_pthread.dylib       	0x000000020d5d86cc _pthread_start + 148 (pthread.c:893)
+10  libsystem_pthread.dylib       	0x000000020d5d7ba4 thread_start + 8 (:-1)
+
+Thread 5 name:
+Thread 5:
+0   libsystem_kernel.dylib        	0x00000001fd17641c __psynch_cvwait + 8 (:-1)
+1   libsystem_pthread.dylib       	0x000000020d5df06c _pthread_cond_wait + 1232 (pthread_cond.c:636)
+2   JavaScriptCore                	0x00000001d3c163ec scavenger_thread_main + 1364 (pas_scavenger.c:145)
+3   libsystem_pthread.dylib       	0x000000020d5d86cc _pthread_start + 148 (pthread.c:893)
+4   libsystem_pthread.dylib       	0x000000020d5d7ba4 thread_start + 8 (:-1)
+
+Thread 6:
+0   libsystem_pthread.dylib       	0x000000020d5d7b90 _pthread_cond_updateval + 256 (pthread_cond.c:992)
+
+Thread 7:
+0   libsystem_pthread.dylib       	0x000000020d5d7b90 _pthread_cond_updateval + 256 (pthread_cond.c:992)
+
+Thread 8:
+0   libsystem_pthread.dylib       	0x000000020d5d7b90 _pthread_cond_updateval + 256 (pthread_cond.c:992)
+
+Thread 9:
+0   libsystem_pthread.dylib       	0x000000020d5d7b90 _pthread_cond_updateval + 256 (pthread_cond.c:992)
+
+Thread 10:
+0   libsystem_pthread.dylib       	0x000000020d5d7b90 _pthread_cond_updateval + 256 (pthread_cond.c:992)
+
+Thread 11:
+0   libsystem_pthread.dylib       	0x000000020d5d7b90 _pthread_cond_updateval + 256 (pthread_cond.c:992)
+
+Thread 12:
+0   libsystem_pthread.dylib       	0x000000020d5d7b90 _pthread_cond_updateval + 256 (pthread_cond.c:992)
+
+Thread 13 name:
+Thread 13:
+0   libsystem_kernel.dylib        	0x00000001fd175b48 mach_msg2_trap + 8 (:-1)
+1   libsystem_kernel.dylib        	0x00000001fd188008 mach_msg2_internal + 80 (mach_msg.c:201)
+2   libsystem_kernel.dylib        	0x00000001fd188248 mach_msg_overwrite + 388 (mach_msg.c:0)
+3   libsystem_kernel.dylib        	0x00000001fd17608c mach_msg + 24 (mach_msg.c:323)
+4   CoreFoundation                	0x00000001c05eeaf0 __CFRunLoopServiceMachPort + 160 (CFRunLoop.c:2622)
+5   CoreFoundation                	0x00000001c05efd34 __CFRunLoopRun + 1232 (CFRunLoop.c:3005)
+6   CoreFoundation                	0x00000001c05f4ed4 CFRunLoopRunSpecific + 612 (CFRunLoop.c:3418)
+7   Foundation                    	0x00000001ba996334 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 212 (NSRunLoop.m:373)
+8   Foundation                    	0x00000001ba9961c8 -[NSRunLoop(NSRunLoop) run] + 64 (NSRunLoop.m:398)
+9   SwiftUI                       	0x00000001c3fb9030 static DisplayLink.asyncThread(arg:) + 800 (_UIHostingView.swift:978)
+10  SwiftUI                       	0x00000001c3fb7168 @objc static DisplayLink.asyncThread(arg:) + 88 (<compiler-generated>:0)
+11  Foundation                    	0x00000001ba9af808 __NSThread__start__ + 716 (NSThread.m:963)
+12  libsystem_pthread.dylib       	0x000000020d5d86cc _pthread_start + 148 (pthread.c:893)
+13  libsystem_pthread.dylib       	0x000000020d5d7ba4 thread_start + 8 (:-1)
+
+
+Thread 0 crashed with ARM Thread State (64-bit):
+    x0: 0x0000000000000000   x1: 0x0000000000000000   x2: 0x0000000000000000   x3: 0x0000000000000000
+    x4: 0x0000000000000000   x5: 0x0000000000989680   x6: 0x000000000000006e   x7: 0x0000000000000000
+    x8: 0xfced3ccd51b5d4b9   x9: 0xfced3ccf470b4b39  x10: 0x00000000000003e8  x11: 0x000000000000000b
+   x12: 0x000000000000000b  x13: 0x00000000001ff800  x14: 0x00000000000007fb  x15: 0x00000000f720e064
+   x16: 0x0000000000000148  x17: 0x0000000216be9f80  x18: 0x0000000000000000  x19: 0x0000000000000006
+   x20: 0x0000000000000103  x21: 0x0000000216bea060  x22: 0x0000000000000007  x23: 0x0000000104560b59
+   x24: 0x0000000000000000  x25: 0x0000000000000001  x26: 0x0000000000000001  x27: 0x0000000000000000
+   x28: 0x00000001e152c980   fp: 0x000000016d42ef10   lr: 0x000000020d5de1ac
+    sp: 0x000000016d42eef0   pc: 0x00000001fd17c200 cpsr: 0x40001000
+   esr: 0x56000080  Address size fault
+
+
+Binary Images:
+        0x1029d0000 -         0x10326ffff MyApp arm64  <95ead24bfb313cf7be26679ccbb0202f> /private/var/containers/Bundle/Application/90C3937F-0BF8-48DE-9DE4-C0D28C06DF11/MyApp.app/MyApp
+        0x10452c000 -         0x10456ffff FirebaseCrashlytics arm64  <c3b5bec2a1683c8ea980eca1951424c5> /private/var/containers/Bundle/Application/90C3937F-0BF8-48DE-9DE4-C0D28C06DF11/MyApp.app/Frameworks/FirebaseCrashlytics.framework/FirebaseCrashlytics
+        0x1b9894000 -         0x1b98d7e1f libobjc.A.dylib arm64e  <ab79707faf643ba588993b711c6cff5c> /usr/lib/libobjc.A.dylib
+        0x1ba954000 -         0x1bb29dfff Foundation arm64e  <c431acb6fe043d28b6774de6e1c7d81f> /System/Library/Frameworks/Foundation.framework/Foundation
+        0x1c0574000 -         0x1c0959fff CoreFoundation arm64e  <5cdc5d9ae5063740b64ebb30867b4f1b> /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+        0x1c16f6000 -         0x1c1abdfff CFNetwork arm64e  <edb0559fc996327f9b3a6616e316f24d> /System/Library/Frameworks/CFNetwork.framework/CFNetwork
+        0x1c2731000 -         0x1c3f0efff UIKitCore arm64e  <179501b60fc2344ab969b4e3961ebe10> /System/Library/PrivateFrameworks/UIKitCore.framework/UIKitCore
+        0x1c3f0f000 -         0x1c5852fff SwiftUI arm64e  <494a7d5790af3e9096237038275b8d87> /System/Library/Frameworks/SwiftUI.framework/SwiftUI
+        0x1c7b91000 -         0x1c7c10ff7 libsystem_c.dylib arm64e  <dad0ce088f353ff4899e43dc44eb65a7> /usr/lib/system/libsystem_c.dylib
+        0x1c908e000 -         0x1c9102fff libswiftUIKit.dylib arm64e  <6383e8e8672633918d95bb5ee497e9aa> /usr/lib/swift/libswiftUIKit.dylib
+        0x1d3b20000 -         0x1d4fdbfff JavaScriptCore arm64e  <f52f1b6ec58537d1be9c31cb270a314b> /System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore
+        0x1dec4b000 -         0x1decce00f dyld arm64e  <cb3ff411476234d286a4eca13f9fb6c3> /usr/lib/dyld
+        0x1f98f5000 -         0x1f98fdfff GraphicsServices arm64e  <a633a095122639428f413877660185ee> /System/Library/PrivateFrameworks/GraphicsServices.framework/GraphicsServices
+        0x1fd175000 -         0x1fd1abffb libsystem_kernel.dylib arm64e  <ff27fc8f90ba3332ab7ac5bc2d9ca7b1> /usr/lib/system/libsystem_kernel.dylib
+        0x20d50d000 -         0x20d524ffb libc++abi.dylib arm64e  <fa871417be083e90b33ca6aa89813f3b> /usr/lib/libc++abi.dylib
+        0x20d5d7000 -         0x20d5e2fff libsystem_pthread.dylib arm64e  <1aa3a4b6f9e730568c8b4e4dd81312a4> /usr/lib/system/libsystem_pthread.dylib
+
+EOF
